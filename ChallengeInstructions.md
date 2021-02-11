@@ -35,12 +35,11 @@ where $1_{\hat y_i = sign(y_i)}$ is equal to 1 if the $i$ -th prediction $\hat y
 
 Input datasets comprise 103 columns: the first `ID` column contains unique row identifiers while the other 102 descriptive features correspond to:
 - `ID_DAY`: an index of the day (the dates are randomized and anonymized so there is no continuity or link between any dates),
-- `RET_i`: the return of illiquid asset i*i* ; there are 100 such illiquid assets,
+- `RET_i`: the return of illiquid asset $i$ ; there are 100 such illiquid assets,
 - `ID_TARGET`: the ID of the liquid asset to predict; there are 100 such liquid assets whose return we want to predict
 
 Output datasets are only composed of 2 columns:
-- `ID`: the unique row identifier (corresponding to the input identifiers)
-  and the target,
+- `ID`: the unique row identifier (corresponding to the input identifiers) and the target,
 - `RET_TARGET`: the return of the liquid asset associated to `ID_TARGET`
 
 The solution files submitted by participants shall follow this output dataset format and contain only two columns: `ID` and `RET_TARGET`, where the ID values correspond to the input test data and RET_TARGET values correspond to the predictions of the sign of the liquid assets' return. An example submission file containing random predictions is provided.
